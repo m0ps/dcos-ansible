@@ -70,7 +70,7 @@
      map(attribute='dcos_installation') | map(attribute='version') | list |
      union([dcos['version_to_upgrade_from'] | default(dcos['version']) ]) | unique }}
 
-- name: Ceate install directory/genconf
+- name: Create install directory/genconf
   file: path={{ download_path }}/genconf state=directory mode=0755
 
 #  vvv DOWNLOAD vvv
