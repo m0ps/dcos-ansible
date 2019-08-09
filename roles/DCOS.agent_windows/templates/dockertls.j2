@@ -4,7 +4,8 @@ param(
   $AlternativeNames = "gateway.docker.internal"
 )
 
-docker container run --rm `
+docker container run --rm `_
+  --user ContainerAdministrator `
   -e SERVER_NAME=$ServerName `
   -e IP_ADDRESSES=$IPAddresses `
   -e ALTERNATIVE_NAMES=$AlternativeNames `
